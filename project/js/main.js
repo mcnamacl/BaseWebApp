@@ -33,9 +33,9 @@ function addMessage(body, title) {
     author: author,
     authorPic: authorPic,
     title: title,
-    body: body
+    body: body 
   };
-
+console.log("test")
   var newPostKey = firebase.database().ref().child('stream').push().key;
   firebase.database().ref('/stream/' + newPostKey).set(postData);
 }
